@@ -1,0 +1,69 @@
+const $ = (s) => document.querySelector(s);
+const params = new URLSearchParams(location.search);
+const room = params.get("room");
+async function data(f) {
+  return fetch(f).then((r) => r.json());
+}
+function cards(items) {
+  return `<div class="grid">${items .map( (x) => `<a class="card" href="?room=${encodeURIComponent( x.room )}"><span class="icon">${x.icon}</span><span>${x.title}</span></a>` ) .join("")}</div>`;
+}
+function entries(items) {
+  return items
+    .map(
+      (x) =>
+        `<article class="entry"><small>${x.date || ""}</small><h2>${ x.title }</h2>${x.image ? `<img src="assets/${x.image}" alt="">` : ""}<p>${ x.text || "" }</p>${ x.link ? `<p><a href="${x.link}" target="_blank" rel="noopener">open →</a></p>` : "" }</article>`
+    )
+    .join("");
+}
+(async () => {
+  const site = await data("data/site.json"),
+    content = await data("data/content.json");
+  if (room) {
+    $("#landing").remove();
+    document.querySelector(
+      "main"
+    ).innerHTML = `<div class="room"><a class="back" href="./">← hallway</a><h1>${room.replace( "-", " " )}</h1>${entries( content[room] || [] )}<div class="footer">end of room</div></div>`;
+    return;
+  }
+  const recent = (content.diary || []).slice(0, 3);
+  $(
+    "#home"
+  ).innerHTML = `<section class="section"><h2>something i made</h2>${cards( site.made )}</section><section class="section"><h2>diary</h2><div class="posts">${recent .map( (x) => `<a class="post" href="?room=diary"><span>${x.title}</span><small>${x.date}</small></a>` ) .join( "" )}</div></section><section class="section"><h2>something i record for life</h2>${cards( site.record )}</section><section class="section"><h2>random area</h2>${cards( site.random )}</section><div class="footer">thanks for walking through</div>`;
+})();
+const c = $("#particles");
+if (c) {
+  const x = c.getContext("2d");
+  let pts = [];
+  function resize() {
+    c.width = innerWidth * devicePixelRatio;
+    c.height = innerHeight * devicePixelRatio;
+    x.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+    pts = Array.from(
+      { length: Math.min(180, Math.floor(innerWidth / 5)) },
+      () => ({
+        x: Math.random() * innerWidth,
+        y: Math.random() * innerHeight,
+        vx: (Math.random() - 0.5) * 0.25,
+        vy: (Math.random() - 0.5) * 0.25,
+        r: Math.random() * 1.5 + 0.3,
+      })
+    );
+  }
+  function loop() {
+    x.clearRect(0, 0, innerWidth, innerHeight);
+    x.fillStyle = "rgba(255,255,255,.72)";
+    for (const p of pts) {
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > innerWidth) p.vx *= -1;
+      if (p.y < 0 || p.y > innerHeight) p.vy *= -1;
+      x.beginPath();
+      x.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      x.fill();
+    }
+    requestAnimationFrame(loop);
+  }
+  addEventListener("resize", resize);
+  resize();
+  loop();
+}
