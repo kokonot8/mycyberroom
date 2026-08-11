@@ -1,0 +1,13 @@
+{
+  "made": [
+    {"title":"tools","icon":"⚙","room":"tools"},
+    {"title":"music","icon":"♫","room":"music"},
+    {"title":"engproject","icon":"⌘","room":"engproject"}
+  ],
+  "record": [
+    {"title":"poet","icon":"✎","room":"poet"},
+    {"title":"visual memory","icon":"▧","room":"visual-memory"},
+    {"title":"杂","icon":"※","room":"misc"}
+  ],
+  "random": [{"title":"???","icon":"?","room":"random"}]
+}

@@ -1,0 +1,10 @@
+{
+  "tools": [{"title":"first tool","date":"2026-08-10","text":"Replace this with a tool you made.","link":""}],
+  "music": [{"title":"first sound","date":"2026-08-10","text":"Put a description, SoundCloud/Bandcamp link, or local audio here.","link":""}],
+  "engproject": [{"title":"first project","date":"2026-08-10","text":"An engineering project lives here.","link":""}],
+  "diary": [{"title":"the hallway is open","date":"2026-08-10","text":"This is the first diary placeholder.","link":""}],
+  "poet": [{"title":"untitled","date":"2026-08-10","text":"Put a poem or fragment here.","link":""}],
+  "visual-memory": [{"title":"memory 001","date":"2026-08-10","text":"Add an image by putting it in assets/ and setting image to its filename.","image":"","link":""}],
+  "misc": [{"title":"something","date":"2026-08-10","text":"Anything that does not need a category.","link":""}],
+  "random": [{"title":"random area","date":"","text":"Leave this strange for now.","link":""}]
+}
