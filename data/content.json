@@ -1,26 +1,80 @@
 {
   "tools": [
-    {"title":"first tool lives here","date":"2026-08-11","text":"This is placeholder content. Later, replace it with a tool you actually made.","link":""}
+    {
+      "title": "first tool lives here",
+      "date": "2026-08-11",
+      "text": "This is placeholder content. Later, replace it with a tool you actually made.",
+      "link": "",
+      "source": "content/tools/first-tool.md"
+    }
   ],
   "music": [
-    {"title":"a sound sketch","date":"2026-08-11","text":"A room for finished music, unfinished loops, patches, recordings, or anything else that makes sound.","link":""}
+    {
+      "title": "a sound sketch",
+      "date": "2026-08-11",
+      "text": "A room for finished music, unfinished loops, patches, recordings, or anything else that makes sound.",
+      "link": "",
+      "source": "content/music/a-sound-sketch.md"
+    }
   ],
   "engproject": [
-    {"title":"an engineering project","date":"2026-08-11","text":"Technical projects can live here without turning the whole site into a portfolio.","link":""}
+    {
+      "title": "an engineering project",
+      "date": "2026-08-11",
+      "text": "Technical projects can live here without turning the whole site into a portfolio.",
+      "link": "",
+      "source": "content/engproject/first-engineering-project.md"
+    }
   ],
   "diary": [
-    {"title":"the hallway is under construction","date":"2026-08-11","text":"The first note in the diary. Replace this whenever you are ready.","link":""},
-    {"title":"a second recent thought","date":"2026-08-10","text":"Recent diary entries automatically appear back in the hallway.","link":""},
-    {"title":"something older","date":"2026-08-01","text":"Newest entries should be placed first in this list.","link":""}
+    {
+      "title": "the hallway is under construction",
+      "date": "2026-08-11",
+      "text": "The first note in the diary.\n\n以后写新 diary，只需要在这个文件夹里新建一个 `.md` 文件。",
+      "link": "",
+      "source": "content/diary/2026-08-11-hallway.md"
+    },
+    {
+      "title": "a second recent thought",
+      "date": "2026-08-10",
+      "text": "Recent diary entries automatically appear back in the hallway.",
+      "link": "",
+      "source": "content/diary/2026-08-10-second-thought.md"
+    },
+    {
+      "title": "something older",
+      "date": "2026-08-01",
+      "text": "Entries are sorted by date automatically. You do not need to rearrange a JSON array.",
+      "link": "",
+      "source": "content/diary/2026-08-01-something-older.md"
+    }
   ],
   "poet": [
-    {"title":"fragment 001","date":"2026-08-11","text":"A place for poems, sentences, fragments, or words that are worth keeping.","link":""}
+    {
+      "title": "fragment 001",
+      "date": "2026-08-11",
+      "text": "A place for poems, sentences, fragments, or words that are worth keeping.",
+      "link": "",
+      "source": "content/poet/fragment-001.md"
+    }
   ],
   "visual-memory": [
-    {"title":"first visual memory","date":"2026-08-11","text":"Put an image in assets/ and add an image field to this entry when you have one.","link":""}
+    {
+      "title": "first visual memory",
+      "date": "2026-08-11",
+      "text": "把照片上传到这个 `.md` 旁边，然后取消上面 image 那一行的注释并填写文件名即可。",
+      "link": "",
+      "source": "content/visual-memory/first-visual-memory.md"
+    }
   ],
   "misc": [
-    {"title":"uncategorized object","date":"2026-08-11","text":"This room is intentionally loose.","link":""}
+    {
+      "title": "uncategorized object",
+      "date": "2026-08-11",
+      "text": "This room is intentionally loose.",
+      "link": "",
+      "source": "content/misc/uncategorized-object.md"
+    }
   ],
   "random": []
 }
