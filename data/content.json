@@ -1,10 +1,26 @@
 {
-  "tools": [{"title":"first tool","date":"2026-08-10","text":"Replace this with a tool you made.","link":""}],
-  "music": [{"title":"first sound","date":"2026-08-10","text":"Put a description, SoundCloud/Bandcamp link, or local audio here.","link":""}],
-  "engproject": [{"title":"first project","date":"2026-08-10","text":"An engineering project lives here.","link":""}],
-  "diary": [{"title":"the hallway is open","date":"2026-08-10","text":"This is the first diary placeholder.","link":""}],
-  "poet": [{"title":"untitled","date":"2026-08-10","text":"Put a poem or fragment here.","link":""}],
-  "visual-memory": [{"title":"memory 001","date":"2026-08-10","text":"Add an image by putting it in assets/ and setting image to its filename.","image":"","link":""}],
-  "misc": [{"title":"something","date":"2026-08-10","text":"Anything that does not need a category.","link":""}],
-  "random": [{"title":"random area","date":"","text":"Leave this strange for now.","link":""}]
+  "tools": [
+    {"title":"first tool lives here","date":"2026-08-11","text":"This is placeholder content. Later, replace it with a tool you actually made.","link":""}
+  ],
+  "music": [
+    {"title":"a sound sketch","date":"2026-08-11","text":"A room for finished music, unfinished loops, patches, recordings, or anything else that makes sound.","link":""}
+  ],
+  "engproject": [
+    {"title":"an engineering project","date":"2026-08-11","text":"Technical projects can live here without turning the whole site into a portfolio.","link":""}
+  ],
+  "diary": [
+    {"title":"the hallway is under construction","date":"2026-08-11","text":"The first note in the diary. Replace this whenever you are ready.","link":""},
+    {"title":"a second recent thought","date":"2026-08-10","text":"Recent diary entries automatically appear back in the hallway.","link":""},
+    {"title":"something older","date":"2026-08-01","text":"Newest entries should be placed first in this list.","link":""}
+  ],
+  "poet": [
+    {"title":"fragment 001","date":"2026-08-11","text":"A place for poems, sentences, fragments, or words that are worth keeping.","link":""}
+  ],
+  "visual-memory": [
+    {"title":"first visual memory","date":"2026-08-11","text":"Put an image in assets/ and add an image field to this entry when you have one.","link":""}
+  ],
+  "misc": [
+    {"title":"uncategorized object","date":"2026-08-11","text":"This room is intentionally loose.","link":""}
+  ],
+  "random": []
 }

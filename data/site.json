@@ -1,13 +1,12 @@
 {
   "made": [
-    {"title":"tools","icon":"⚙","room":"tools"},
-    {"title":"music","icon":"♫","room":"music"},
-    {"title":"engproject","icon":"⌘","room":"engproject"}
+    {"id":"tools","label":"tools","icon":"⌘","description":"small tools, utilities and useful experiments"},
+    {"id":"music","label":"music","icon":"♫","description":"tracks, sketches and sound experiments"},
+    {"id":"engproject","label":"engproject","icon":"⌁","description":"engineering projects and technical things"}
   ],
-  "record": [
-    {"title":"poet","icon":"✎","room":"poet"},
-    {"title":"visual memory","icon":"▧","room":"visual-memory"},
-    {"title":"杂","icon":"※","room":"misc"}
-  ],
-  "random": [{"title":"???","icon":"?","room":"random"}]
+  "life": [
+    {"id":"poet","label":"poet","icon":"✎","description":"words, fragments and poems I want to keep"},
+    {"id":"visual-memory","label":"visual memory","icon":"▣","description":"images and moments I want to remember"},
+    {"id":"misc","label":"杂","icon":"※","description":"things that refuse to fit anywhere else"}
+  ]
 }

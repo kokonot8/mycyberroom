@@ -1,34 +1,69 @@
-# Personal Site V0
+# Personal Site V1 — hallway + rooms
 
-A simple static personal site: particle landing → hallway → icon rooms.
+The implemented structure is:
 
-## The only files you normally edit
+`particle landing → welcome → something i made → diary → something i record for life → random area`
 
-### 1. Add/update content: `data/content.json`
-Each room is a list. Copy an existing item and change it:
+Every square on the hallway opens a room. Rooms use the same visual system and contain the actual entries.
+
+## Everyday updating: only edit ONE file
+
+Open `data/content.json`. You normally do **not** need to edit HTML, CSS, or JavaScript.
+
+Each room is an array:
+
+- `tools`
+- `music`
+- `engproject`
+- `diary`
+- `poet`
+- `visual-memory`
+- `misc`
+- `random`
+
+Copy an existing object and change it:
 
 ```json
-{"title":"my new thing","date":"2026-08-10","text":"description","link":"https://..."}
+{
+  "title": "my new thing",
+  "date": "2026-08-12",
+  "text": "what I want to say",
+  "link": "https://example.com"
+}
 ```
 
-Rooms: `tools`, `music`, `engproject`, `diary`, `poet`, `visual-memory`, `misc`, `random`.
+For diary, put the newest entry first. The hallway automatically shows the first 3 diary entries.
 
-The homepage automatically shows the first 3 items in `diary`. Put newest diary items first.
+## Images / visual memory
 
-### 2. Add images: `assets/`
-Copy the image into `assets`, e.g. `summer.jpg`, then use:
+1. Upload the image to `assets/`, for example `summer.jpg`.
+2. Add `"image": "summer.jpg"` to the entry:
 
 ```json
-{"title":"summer","date":"2026-08-10","text":"","image":"summer.jpg","link":""}
+{
+  "title": "summer evening",
+  "date": "2026-08-12",
+  "text": "somewhere I wanted to remember",
+  "image": "summer.jpg",
+  "link": ""
+}
 ```
 
-### 3. Change homepage room icons/names: `data/site.json`
-You normally do not need to touch HTML/CSS/JS.
+## Phone-friendly GitHub workflow
 
-## Preview locally
-Because the site loads JSON, use a tiny local server instead of double-clicking index.html.
+Once this folder is in a GitHub repository and GitHub Pages is enabled:
 
-Python if available:
+1. Open the repo on your phone.
+2. Edit `data/content.json` directly on GitHub (or github.dev).
+3. Upload new photos to `assets/` when needed.
+4. Commit changes.
+5. GitHub Pages updates the site automatically.
+
+So ordinary content updates are: **edit JSON → commit**. Layout/code stays untouched.
+
+## Preview
+
+Do not double-click `index.html`, because browsers block local JSON fetches. Use GitHub Pages, github.dev preview tooling, or a tiny local server:
 
 ```bash
 python -m http.server 8000
@@ -36,10 +71,13 @@ python -m http.server 8000
 
 Then open `http://localhost:8000`.
 
-## Publish / update with GitHub Pages
-1. Create a GitHub repository.
-2. Upload everything in this folder to the repository root.
-3. In repository Settings → Pages, deploy from the main branch/root.
-4. For future updates, normally only edit `data/content.json` and upload new files to `assets/`, then commit/push.
+## Files
 
-This separation is intentional: layout/code stays stable; your content is data.
+- `index.html` — hallway page
+- `room.html` — shared room page
+- `style.css` — all visual styling
+- `app.js` — hallway + particles
+- `room.js` — room rendering
+- `data/site.json` — hallway square names/icons
+- `data/content.json` — **your content; edit this most often**
+- `assets/` — images

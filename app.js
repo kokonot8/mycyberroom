@@ -1,78 +1,11 @@
-<<<<<<< HEAD
-const $=s=>document.querySelector(s); const params=new URLSearchParams(location.search); const room=params.get('room');
-async function data(f){return fetch(f).then(r=>r.json())}
-function cards(items){return `<div class="grid">${items.map(x=>`<a class="card" href="?room=${encodeURIComponent(x.room)}"><span class="icon">${x.icon}</span><span>${x.title}</span></a>`).join('')}</div>`}
-function entries(items){return items.map(x=>`<article class="entry"><small>${x.date||''}</small><h2>${x.title}</h2>${x.image?`<img src="assets/${x.image}" alt="">`:''}<p>${x.text||''}</p>${x.link?`<p><a href="${x.link}" target="_blank" rel="noopener">open →</a></p>`:''}</article>`).join('')}
-(async()=>{const site=await data('data/site.json'), content=await data('data/content.json'); if(room){$('#landing').remove(); document.querySelector('main').innerHTML=`<div class="room"><a class="back" href="./">← hallway</a><h1>${room.replace('-', ' ')}</h1>${entries(content[room]||[])}<div class="footer">end of room</div></div>`;return} const recent=(content.diary||[]).slice(0,3); $('#home').innerHTML=`<section class="section"><h2>something i made</h2>${cards(site.made)}</section><section class="section"><h2>diary</h2><div class="posts">${recent.map(x=>`<a class="post" href="?room=diary"><span>${x.title}</span><small>${x.date}</small></a>`).join('')}</div></section><section class="section"><h2>something i record for life</h2>${cards(site.record)}</section><section class="section"><h2>random area</h2>${cards(site.random)}</section><div class="footer">thanks for walking through</div>`})();
-const c=$('#particles'); if(c){const x=c.getContext('2d');let pts=[];function resize(){c.width=innerWidth*devicePixelRatio;c.height=innerHeight*devicePixelRatio;x.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);pts=Array.from({length:Math.min(180,Math.floor(innerWidth/5))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.5+.3}))}function loop(){x.clearRect(0,0,innerWidth,innerHeight);x.fillStyle='rgba(255,255,255,.72)';for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>innerWidth)p.vx*=-1;if(p.y<0||p.y>innerHeight)p.vy*=-1;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fill()}requestAnimationFrame(loop)}addEventListener('resize',resize);resize();loop()}
-=======
-const $ = (s) => document.querySelector(s);
-const params = new URLSearchParams(location.search);
-const room = params.get("room");
-async function data(f) {
-  return fetch(f).then((r) => r.json());
-}
-function cards(items) {
-  return `<div class="grid">${items .map( (x) => `<a class="card" href="?room=${encodeURIComponent( x.room )}"><span class="icon">${x.icon}</span><span>${x.title}</span></a>` ) .join("")}</div>`;
-}
-function entries(items) {
-  return items
-    .map(
-      (x) =>
-        `<article class="entry"><small>${x.date || ""}</small><h2>${ x.title }</h2>${x.image ? `<img src="assets/${x.image}" alt="">` : ""}<p>${ x.text || "" }</p>${ x.link ? `<p><a href="${x.link}" target="_blank" rel="noopener">open →</a></p>` : "" }</article>`
-    )
-    .join("");
-}
-(async () => {
-  const site = await data("data/site.json"),
-    content = await data("data/content.json");
-  if (room) {
-    $("#landing").remove();
-    document.querySelector(
-      "main"
-    ).innerHTML = `<div class="room"><a class="back" href="./">← hallway</a><h1>${room.replace( "-", " " )}</h1>${entries( content[room] || [] )}<div class="footer">end of room</div></div>`;
-    return;
-  }
-  const recent = (content.diary || []).slice(0, 3);
-  $(
-    "#home"
-  ).innerHTML = `<section class="section"><h2>something i made</h2>${cards( site.made )}</section><section class="section"><h2>diary</h2><div class="posts">${recent .map( (x) => `<a class="post" href="?room=diary"><span>${x.title}</span><small>${x.date}</small></a>` ) .join( "" )}</div></section><section class="section"><h2>something i record for life</h2>${cards( site.record )}</section><section class="section"><h2>random area</h2>${cards( site.random )}</section><div class="footer">thanks for walking through</div>`;
-})();
-const c = $("#particles");
-if (c) {
-  const x = c.getContext("2d");
-  let pts = [];
-  function resize() {
-    c.width = innerWidth * devicePixelRatio;
-    c.height = innerHeight * devicePixelRatio;
-    x.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-    pts = Array.from(
-      { length: Math.min(180, Math.floor(innerWidth / 5)) },
-      () => ({
-        x: Math.random() * innerWidth,
-        y: Math.random() * innerHeight,
-        vx: (Math.random() - 0.5) * 0.25,
-        vy: (Math.random() - 0.5) * 0.25,
-        r: Math.random() * 1.5 + 0.3,
-      })
-    );
-  }
-  function loop() {
-    x.clearRect(0, 0, innerWidth, innerHeight);
-    x.fillStyle = "rgba(255,255,255,.72)";
-    for (const p of pts) {
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0 || p.x > innerWidth) p.vx *= -1;
-      if (p.y < 0 || p.y > innerHeight) p.vy *= -1;
-      x.beginPath();
-      x.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      x.fill();
-    }
-    requestAnimationFrame(loop);
-  }
-  addEventListener("resize", resize);
-  resize();
-  loop();
-}
->>>>>>> eb8aea9d75893fff45009e20d66215836ee83589
+const $=(s,r=document)=>r.querySelector(s);const esc=s=>String(s??'').replace(/[&<>\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+async function loadJSON(p){const r=await fetch(p);if(!r.ok)throw new Error(`${p}: ${r.status}`);return r.json()}
+function card(r){return `<a class="room-card" href="room.html?room=${encodeURIComponent(r.id)}"><span class="icon">${esc(r.icon)}</span><span class="label">${esc(r.label)}</span><span class="hint">enter ↗</span></a>`}
+async function home(){const home=$('#home');if(!home)return;try{const [site,data]=await Promise.all([loadJSON('data/site.json'),loadJSON('data/content.json')]);const posts=(data.diary||[]).slice(0,3);home.innerHTML=`
+<section class="hall-section"><span class="eyebrow">01 / rooms</span><h2>something i made</h2><div class="room-grid">${site.made.map(card).join('')}</div></section>
+<section class="hall-section"><span class="eyebrow">02 / notes</span><h2>diary</h2><div class="recent-list">${posts.map((p,i)=>`<a class="recent-row" href="room.html?room=diary#entry-${i}"><span class="date">${esc(p.date)}</span><span class="post-title">${esc(p.title)}</span><span class="arrow">→</span></a>`).join('')}</div><a class="section-link" href="room.html?room=diary">all diary entries →</a></section>
+<section class="hall-section"><span class="eyebrow">03 / archive</span><h2>something i record for life</h2><div class="room-grid">${site.life.map(card).join('')}</div></section>
+<section class="hall-section"><span class="eyebrow">04 / ???</span><h2>random area</h2><a class="random-box" href="room.html?room=random">nothing has moved in yet.<br>this space is waiting for something unnecessary →</a></section>`}catch(e){home.innerHTML=`<div class="error">Could not load the content files. If you opened index.html directly, preview through a web server or GitHub Pages.<br>${esc(e.message)}</div>`}}
+home();
+// lightweight interactive particle field
+(()=>{const c=$('#particles');if(!c)return;const x=c.getContext('2d');let w,h,dpr,pts=[],mouse={x:-9999,y:-9999};function resize(){dpr=Math.min(devicePixelRatio||1,2);w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);const n=Math.min(180,Math.max(70,Math.floor(w*h/8500)));pts=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.35,a:Math.random()*.55+.2}))}function move(e){const p=e.touches?.[0]||e;mouse.x=p.clientX;mouse.y=p.clientY}addEventListener('resize',resize);c.addEventListener('mousemove',move);c.addEventListener('touchmove',move,{passive:true});resize();function tick(){x.fillStyle='rgba(8,9,9,.18)';x.fillRect(0,0,w,h);for(const p of pts){let dx=p.x-mouse.x,dy=p.y-mouse.y,dd=dx*dx+dy*dy;if(dd<18000&&dd>1){let f=(1-Math.sqrt(dd)/135)*.012;p.vx+=dx*f;p.vy+=dy*f}p.vx*=.995;p.vy*=.995;p.x+=p.vx;p.y+=p.vy;if(p.x<-10)p.x=w+10;if(p.x>w+10)p.x=-10;if(p.y<-10)p.y=h+10;if(p.y>h+10)p.y=-10;x.beginPath();x.fillStyle=`rgba(238,242,236,${p.a})`;x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fill()}requestAnimationFrame(tick)}tick()})();
