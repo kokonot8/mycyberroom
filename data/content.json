@@ -28,6 +28,13 @@
   ],
   "diary": [
     {
+      "title": "test",
+      "date": "2026-08-11",
+      "text": "just for test",
+      "link": "",
+      "source": "content/diary/20260813_test.md"
+    },
+    {
       "title": "the hallway is under construction",
       "date": "2026-08-11",
       "text": "The first note in the diary.\n\n以后写新 diary，只需要在这个文件夹里新建一个 `.md` 文件。",
@@ -47,13 +54,6 @@
       "text": "Entries are sorted by date automatically. You do not need to rearrange a JSON array.",
       "link": "",
       "source": "content/diary/2026-08-01-something-older.md"
-    },
-    {
-      "title": "20260813_test",
-      "date": "",
-      "text": "just for test",
-      "link": "",
-      "source": "content/diary/20260813_test.md"
     }
   ],
   "poet": [
