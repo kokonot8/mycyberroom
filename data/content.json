@@ -37,6 +37,16 @@
   ],
   "diary": [
     {
+      "id": "20260813_test",
+      "title": "test",
+      "date": "2026-08-11",
+      "text": "just for test",
+      "link": "",
+      "source": "content/diary/20260813_test.md",
+      "images": [],
+      "url": "items/diary/20260813_test/"
+    },
+    {
       "id": "2026-08-11-hallway",
       "title": "the hallway is under construction",
       "date": "2026-08-11",
@@ -77,9 +87,31 @@
       "source": "content/poet/fragment-001.md",
       "images": [],
       "url": "items/poet/fragment-001/"
+    },
+    {
+      "id": "fragment-past001",
+      "title": "test",
+      "date": "2026-08-11",
+      "text": "你说你感到一种寂寥，我低头想，\n欢迎你来到这里，我们从来都是孤单的，\n从来都是。可这样不是太过自大吗？\n仿佛你我不再是亲密的旅伴，仿佛\n我背叛了一种忠实。\n活着，承受着，\n这条路我走得浑身冰冷，\n转身却看到你已经甩下我，\n走进礁石里去。药和电囫囵下咽，\n路…正在塌陷，你撑起\n透明的战袍，活成一个勇士，仿佛\n你天生就是。我竟才看出\n那路是险象环生，苦难是后知后觉。",
+      "link": "",
+      "source": "content/poet/fragment-past001.md",
+      "images": [],
+      "url": "items/poet/fragment-past001/"
     }
   ],
   "visual-memory": [
+    {
+      "id": "test",
+      "title": "en",
+      "date": "2026-08-20",
+      "text": "嗯嗯",
+      "link": "",
+      "source": "content/visual-memory/test.md",
+      "images": [
+        "content/visual-memory/IMG_4407.jpeg"
+      ],
+      "url": "items/visual-memory/test/"
+    },
     {
       "id": "first-visual-memory",
       "title": "first visual memory",
