@@ -1,79 +1,97 @@
 {
   "tools": [
     {
+      "id": "first-tool",
       "title": "first tool lives here",
       "date": "2026-08-11",
       "text": "This is placeholder content. Later, replace it with a tool you actually made.",
       "link": "",
-      "source": "content/tools/first-tool.md"
+      "source": "content/tools/first-tool.md",
+      "images": []
     }
   ],
   "music": [
     {
+      "id": "a-sound-sketch",
       "title": "a sound sketch",
       "date": "2026-08-11",
       "text": "A room for finished music, unfinished loops, patches, recordings, or anything else that makes sound.",
       "link": "",
-      "source": "content/music/a-sound-sketch.md"
+      "source": "content/music/a-sound-sketch.md",
+      "images": []
     }
   ],
   "engproject": [
     {
+      "id": "first-engineering-project",
       "title": "an engineering project",
       "date": "2026-08-11",
       "text": "Technical projects can live here without turning the whole site into a portfolio.",
       "link": "",
-      "source": "content/engproject/first-engineering-project.md"
+      "source": "content/engproject/first-engineering-project.md",
+      "images": []
     }
   ],
   "diary": [
     {
+      "id": "2026-08-11-hallway",
       "title": "the hallway is under construction",
       "date": "2026-08-11",
       "text": "The first note in the diary.\n\n以后写新 diary，只需要在这个文件夹里新建一个 `.md` 文件。",
       "link": "",
-      "source": "content/diary/2026-08-11-hallway.md"
+      "source": "content/diary/2026-08-11-hallway.md",
+      "images": []
     },
     {
+      "id": "2026-08-10-second-thought",
       "title": "a second recent thought",
       "date": "2026-08-10",
       "text": "Recent diary entries automatically appear back in the hallway.",
       "link": "",
-      "source": "content/diary/2026-08-10-second-thought.md"
+      "source": "content/diary/2026-08-10-second-thought.md",
+      "images": []
     },
     {
+      "id": "2026-08-01-something-older",
       "title": "something older",
       "date": "2026-08-01",
       "text": "Entries are sorted by date automatically. You do not need to rearrange a JSON array.",
       "link": "",
-      "source": "content/diary/2026-08-01-something-older.md"
+      "source": "content/diary/2026-08-01-something-older.md",
+      "images": []
     }
   ],
   "poet": [
     {
+      "id": "fragment-001",
       "title": "fragment 001",
       "date": "2026-08-11",
       "text": "A place for poems, sentences, fragments, or words that are worth keeping.",
       "link": "",
-      "source": "content/poet/fragment-001.md"
+      "source": "content/poet/fragment-001.md",
+      "images": []
     }
   ],
   "visual-memory": [
     {
+      "id": "first-visual-memory",
       "title": "first visual memory",
       "date": "2026-08-11",
       "text": "把照片上传到这个 `.md` 旁边，然后取消上面 image 那一行的注释并填写文件名即可。",
       "link": "",
-      "source": "content/visual-memory/first-visual-memory.md"
+      "source": "content/visual-memory/first-visual-memory.md",
+      "images": []
     }
   ],
   "misc": [
     {
+      "id": "uncategorized-object",
       "title": "uncategorized object",
       "date": "2026-08-11",
       "text": "This room is intentionally loose.",
       "link": "",
-      "source": "content/misc/uncategorized-object.md"
+      "source": "content/misc/uncategorized-object.md",
+      "images": []
     }
   ],
   "random": []
