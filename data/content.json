@@ -7,7 +7,8 @@
       "text": "This is placeholder content. Later, replace it with a tool you actually made.",
       "link": "",
       "source": "content/tools/first-tool.md",
-      "images": []
+      "images": [],
+      "url": "items/tools/first-tool/"
     }
   ],
   "music": [
@@ -18,7 +19,8 @@
       "text": "A room for finished music, unfinished loops, patches, recordings, or anything else that makes sound.",
       "link": "",
       "source": "content/music/a-sound-sketch.md",
-      "images": []
+      "images": [],
+      "url": "items/music/a-sound-sketch/"
     }
   ],
   "engproject": [
@@ -29,7 +31,8 @@
       "text": "Technical projects can live here without turning the whole site into a portfolio.",
       "link": "",
       "source": "content/engproject/first-engineering-project.md",
-      "images": []
+      "images": [],
+      "url": "items/engproject/first-engineering-project/"
     }
   ],
   "diary": [
@@ -40,7 +43,8 @@
       "text": "The first note in the diary.\n\n以后写新 diary，只需要在这个文件夹里新建一个 `.md` 文件。",
       "link": "",
       "source": "content/diary/2026-08-11-hallway.md",
-      "images": []
+      "images": [],
+      "url": "items/diary/2026-08-11-hallway/"
     },
     {
       "id": "2026-08-10-second-thought",
@@ -49,7 +53,8 @@
       "text": "Recent diary entries automatically appear back in the hallway.",
       "link": "",
       "source": "content/diary/2026-08-10-second-thought.md",
-      "images": []
+      "images": [],
+      "url": "items/diary/2026-08-10-second-thought/"
     },
     {
       "id": "2026-08-01-something-older",
@@ -58,7 +63,8 @@
       "text": "Entries are sorted by date automatically. You do not need to rearrange a JSON array.",
       "link": "",
       "source": "content/diary/2026-08-01-something-older.md",
-      "images": []
+      "images": [],
+      "url": "items/diary/2026-08-01-something-older/"
     }
   ],
   "poet": [
@@ -69,7 +75,8 @@
       "text": "A place for poems, sentences, fragments, or words that are worth keeping.",
       "link": "",
       "source": "content/poet/fragment-001.md",
-      "images": []
+      "images": [],
+      "url": "items/poet/fragment-001/"
     }
   ],
   "visual-memory": [
@@ -80,7 +87,8 @@
       "text": "把照片上传到这个 `.md` 旁边，然后取消上面 image 那一行的注释并填写文件名即可。",
       "link": "",
       "source": "content/visual-memory/first-visual-memory.md",
-      "images": []
+      "images": [],
+      "url": "items/visual-memory/first-visual-memory/"
     }
   ],
   "misc": [
@@ -91,7 +99,8 @@
       "text": "This room is intentionally loose.",
       "link": "",
       "source": "content/misc/uncategorized-object.md",
-      "images": []
+      "images": [],
+      "url": "items/misc/uncategorized-object/"
     }
   ],
   "random": []
