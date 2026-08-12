@@ -47,6 +47,13 @@
       "text": "Entries are sorted by date automatically. You do not need to rearrange a JSON array.",
       "link": "",
       "source": "content/diary/2026-08-01-something-older.md"
+    },
+    {
+      "title": "20260813_test",
+      "date": "",
+      "text": "just for test",
+      "link": "",
+      "source": "content/diary/20260813_test.md"
     }
   ],
   "poet": [
